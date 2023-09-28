@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz - informacje o locie</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <h1>Informacje o lotach</h1>
+        <form action="" method="POST" enctype="multipart/form-data">
+            <fieldset id="grupa1">
+                
+                <div class="grupa1_item">
+                    <label for="date">
+                        Data lotu
+                    </label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="grupa1_item">
+                    <label for="takeoff">
+                        Wylot
+                    </label>
+
+                    <select id="takeoff" name="takeoff" required>
+                        <option value="placeholder" selected hidden>WYBIERZ</option>
+                        <option value="Azerbejdżam">Azerbejdżam</option>
+                        <option value="RPA">RPA</option>
+                        <option value="Żwirki">Żwirki</option>
+                    </select>
+                </div>
+
+
+                <div class="grupa1_item">
+                    <label for="landing">
+                        Lądowanie
+                    </label>
+                    <select id="landing" name="landing" required>
+                        <option value="placeholder" selected hidden>WYBIERZ</option>
+                        <option value="Azerbejdżam">Azerbejdżam</option>
+                        <option value="RPA">RPA</option>
+                        <option value="Żwirki">Żwirki</option>
+                    </select>
+                </div>
+
+
+                <div class="grupa1_item">
+                    <label for="NumberOfPeople">
+                        Ilość osób
+                    </label>
+                    <input type="number" id="NumberOfPeople" name="NumberOfPeople" placeholder="1" required>
+                </div>
+
+
+                <div class="grupa1_item">
+                    <label>Klasa miejsca</label>
+                    <label>
+                        <input type="radio" name="seat_class" value="business" >
+                        Klasa Biznes
+                    </label>
+
+                    <label>
+                        <input type="radio" name="seat_class" value="first_class">
+                        Klasa Pierwsza
+                    </label>
+
+                    <label>
+                        <input type="radio" name="seat_class" value="economical">
+                        Klasa Ekonomiczna
+                    </label>
+                </div>
+
+
+                <div class="grupa1_item">
+                    <label>
+                        <input type="checkbox" name="luggage" value="true">
+                        Dodatkowy bagaż
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="transfer" value="true">
+                        Przesiadki
+                    </label>
+
+                </div>
+
+            </fieldset>
+
+
+            <h1>
+                Dane osobowe
+            </h1>
+            <fieldset>
+                
+
+                <label for="Name">
+                    Imie i Nazsiwko
+                </label>
+
+                <input type="text" id="Name" name="Name" required>
+
+
+                <label for="EMAIL">
+                    EMAIL
+                </label>
+
+                <input type="email" id="EMAIL" name="EMAIL" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+
+
+                <label for="phone">
+                    NR. telefonu
+                </label>
+
+                <input type="tel" id="phone" name="phone" maxlength="9" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}">
+
+            </fieldset>
+
+
+            <h1>Uwagi</h1>
+
+            <fieldset>
+
+                <textarea placeholder="UWAGI"></textarea>
+
+            </fieldset>
+
+            <div id="Send_button_holder">
+
+                <label>
+                    <input type="checkbox" name="accept" value="accept" required> Akceptuj regulamin
+                </label>
+
+                <input type="submit" value="Prześlij">
+            </div>
+
+        </form>
+
+    </main>
+
+</body>
+</html>
